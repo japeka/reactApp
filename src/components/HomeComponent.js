@@ -18,9 +18,6 @@ function RenderCard({item}) {
     }
 
 function Home(props) {
-    console.log("props");
-    console.log(props);
-    console.log("props");
     return(
         <div className="container">
 
@@ -34,9 +31,7 @@ function Home(props) {
                 <div className="col-12 col-md m-1">
                     <RenderCard item={props.leader}/>                
                 </div>
-
            </div>              
-
         </div>
     );
 }
