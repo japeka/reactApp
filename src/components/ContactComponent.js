@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, Row, FormFeedback} from 'reactstrap';
+import {Breadcrumb, BreadcrumbItem, Button, Form, FormGroup,
+        Label, Input, Col, Row, FormFeedback} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
 class Contact extends Component {
@@ -21,6 +22,7 @@ class Contact extends Component {
                 email: false
             }
         }
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
@@ -49,7 +51,7 @@ class Contact extends Component {
         });
     }
 
-    validate(firstname, lastname, telnum, email){
+    validate(firstname, lastname, telnum, email) {
         const errors = {
             firstname: '',
             lastname: '',
