@@ -25,17 +25,15 @@ class Header extends Component {
 
     toggleModal() {
         this.setState({
-            isModalOpen: !this.isNavOpen
+          isModalOpen: !this.state.isModalOpen
         });
-    }
+      }
+      
 
     handleLogin(event) {
-        //this.toggleModal();
-        this.setState({
-            isModalOpen: false,
-            isNavOpen: false
-        });
-        console.log(this.username.value + " " + this.password.value + " " + this.remember.checked);
+        this.toggleModal();
+        alert("Username: " + this.username.value + " Password: " + this.password.value
+        + " Remember: " + this.remember.checked);
         event.preventDefault();
     }
 
@@ -97,7 +95,7 @@ class Header extends Component {
                     </div>
                 </Jumbotron>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader>
+                    <ModalHeader toggle={this.toggleModal}>
                         Login
                     </ModalHeader>
                     <ModalBody>
@@ -127,6 +125,8 @@ class Header extends Component {
                               Login
                             </Button>
                         </Form>
+
+
                     </ModalBody>
                 </Modal>
            </React.Fragment>
